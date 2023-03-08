@@ -8,6 +8,18 @@ const routes: Routes = [
       import('./features/home/home.module').then(
         (m) => m.HomeModule
       ),
+  },
+  {
+    path: 'cart',
+    loadChildren: () =>
+      import('./features/cart/cart.module').then(
+        (m) => m.CartModule
+      ),
+  },
+  {
+    path: '',
+    redirectTo: '',
+    pathMatch: 'full'
   }
 ];
 

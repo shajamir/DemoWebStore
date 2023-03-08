@@ -1,0 +1,13 @@
+<ng-container *ngIf="cartItems$ | async as cartItems">
+    <div class="cart-items" *ngIf="cartItems.length">
+        <ul>
+            <li>
+                <span class="total-price-info">Total Price: {{ cartAmount$ | async | currency }}</span>
+                <span class="list-title">List of cart</span>
+            </li>
+            <div class="cart-detail">
+                <app-cart-detail *ngFor="let cartItem of cartItems" [cartItem] = "cartItem"></app-cart-detail>
+            </div>
+        </ul>
+    </div>
+</ng-container>

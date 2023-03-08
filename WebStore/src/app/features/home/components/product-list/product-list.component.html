@@ -1,10 +1,14 @@
-<div class="products-list" *ngIf="products$ | async as products">
-    <ul>
-        <li><span class="list-title">List of items</span></li>
-        <app-product-detail 
-            *ngFor="let product of products" [product] = "product"
-            (onAddedToCart)="addToCart($event)"
-        >
-        </app-product-detail>
-    </ul>
-</div>
+<ng-container *ngIf="products$ | async as products">
+    <div class="products-list" *ngIf="products.length">
+        <ul>
+            <li><span class="list-title">List of items</span></li>
+            <div class="product-detail">
+                <app-product-detail 
+                    *ngFor="let product of products" [product] = "product"
+                    (onAddedToCart)="addToCart($event)"
+                >
+                </app-product-detail>
+            </div>
+        </ul>
+    </div>
+</ng-container>

@@ -1,5 +1,5 @@
 <li>
     <span class="product-info">{{product.title}}</span>
-    <span class="product-info">{{product.price}}</span>
+    <span class="product-info">{{product.price | currency}}</span>
     <button id="add-to-cart" (click)="addToCart()">Add to cart</button>
 </li>
