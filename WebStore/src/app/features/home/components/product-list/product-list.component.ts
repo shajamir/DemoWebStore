@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IProduct } from 'src/app/core/models/product';
+import { CartService } from 'src/app/core/services/cart.service';
 import { ProductService } from 'src/app/core/services/product.service';
 
 @Component({
@@ -15,9 +16,10 @@ export class ProductListComponent implements OnInit //, OnDestroy
   // products: IProduct[] = []
   products$: Observable<IProduct[]>
 
-  constructor(private productService: ProductService) {}
+  constructor(private productService: ProductService, private cartService: CartService) {}
 
   addToCart(product: IProduct): void {
+    this.cartService.addToCart(product);
     console.log(product);
   }
 

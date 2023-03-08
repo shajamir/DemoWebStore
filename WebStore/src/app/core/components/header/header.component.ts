@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-header',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
+  quantity$: Observable<number>
+
+  constructor(private cartService: CartService) {}
+  
+  ngOnInit(): void {
+    this.quantity$ = this.cartService.getCartQuantity();
+  }
 }

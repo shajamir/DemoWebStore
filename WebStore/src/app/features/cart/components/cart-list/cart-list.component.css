@@ -2,11 +2,16 @@ ul {
     list-style: none;
 }
 
-.products-list {
+.cart-items {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 150px;
+}
+
+.total-price-info {
+    display: flex;
+    justify-content: left;
 }
 
 .list-title {
@@ -14,6 +19,6 @@ ul {
     justify-content: right;
 }
 
-.product-detail {
+.cart-detail {
     border-top: solid 1px black;
 }

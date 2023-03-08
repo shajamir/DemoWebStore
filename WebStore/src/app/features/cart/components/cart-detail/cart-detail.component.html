@@ -1,0 +1,5 @@
+<li>
+    <span class="cart-item-info">{{ cartItem.product.title }}</span>
+    <span class="cart-item-info">qty: {{ cartItem.quantity }}</span>
+    <span class="cart-item-info">{{ cartItem.quantity * cartItem.product.price | currency }}</span>
+</li>
