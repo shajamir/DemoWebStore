@@ -1,0 +1,14 @@
+li {
+    display: flex;
+    font-size: 15px;
+    margin: 10px;
+}
+
+.product-info {
+    width: 100%;
+    margin: 0 50px;
+}
+
+#add-to-cart {
+    width: 20%;
+}

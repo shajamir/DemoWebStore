@@ -1,0 +1,27 @@
+header {
+    background: #ad5651;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;   
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu li a {
+    color: #f5f5f5;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0 20px;
+}
+
+.cart-info {
+    color: #f5f5f5;
+    font-size: 16px;
+    padding: 0 20px;
+}
